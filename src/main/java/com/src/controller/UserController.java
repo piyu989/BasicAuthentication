@@ -23,6 +23,11 @@ public class UserController {
 		return service.save(user);
 	}
 	
+	@PostMapping("/login")
+	public String login(@RequestBody User user) {
+		return service.verify(user);
+	}
+	
 	@GetMapping("/users")
 	public List<User> getAllUser(){
 		return service.getAllUser();

@@ -12,5 +12,6 @@ public interface UserService {
 	User save(User user);
 	List<User> getAllUser();
 	User getUser(String username);
+	String verify(User user);
 	
 }
