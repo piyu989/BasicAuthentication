@@ -56,6 +56,7 @@ public class UserServiceImpl implements UserService {
 				authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
 		
 		if(authentication.isAuthenticated()) {
+			System.out.println("something woring happened");;
 			return jwtService.generateToken(user.getUsername());
 //			return "success";
 		}
